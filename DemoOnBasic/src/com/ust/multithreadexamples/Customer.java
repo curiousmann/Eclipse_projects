@@ -6,9 +6,9 @@ public class Customer {
 	boolean islow=true;
 
 	public synchronized void withdrawal(int amount){
-		if(this.amount<amount){
+		while(this.amount<amount){
 			this.islow=false;
-			System.out.print("\ninsufficient Balence...\n"
+			System.out.print("\n\nInsufficient Balence...\n"
 					+ "Customer has to wait untill deposit the amount"
 					+ "\n\nEnter an option :");
 
@@ -28,10 +28,10 @@ public class Customer {
 				e.printStackTrace();
 			}	
 		}
-		
+
 		this.amount=this.amount-amount;
 
-		System.out.println("\nWithdrawal Successfull...\n"
+		System.out.println("\n\nWithdrawal Successfull...\n"
 				+ "Balance amount is "+this.amount
 				+"\n\nEnter an option :\n");
 
