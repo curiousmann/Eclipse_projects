@@ -67,10 +67,8 @@ public class Test {
 		       int arr[]= new int[] {10,30,60,40,50};
 		       
 		       //converting array into stream
-		       Stream<int[]> st=Stream.of(arr);
-		       
-		    
-		       
+		       @SuppressWarnings("unused")
+			Stream<int[]> st=Stream.of(arr);
 		       
 		}
 		

@@ -2,6 +2,7 @@ package assignment;
 //import java.util.*;
 public class EmpTreeMap {
 
+			@SuppressWarnings("unused")
 			public static void main(String[] args) {
 
 			//Interface Reference variable holding its implementation Object

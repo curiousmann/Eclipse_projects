@@ -7,7 +7,7 @@ public class ExampleOnHashSet1 {
 
 	public static void main(String[] args) {
 		
-       HashSet hs = new HashSet();
+       HashSet<Object> hs = new HashSet<Object>();
        
 		hs.add(10);
 		hs.add("smith");
@@ -27,7 +27,7 @@ public class ExampleOnHashSet1 {
 		
 		System.out.println("displaying the elements using the iterator");
 		 
-		 Iterator iobj =hs.iterator();
+		 Iterator<Object> iobj =hs.iterator();
 		 while(iobj.hasNext()) {
 			 System.out.println(iobj.next());
 		 }

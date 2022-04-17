@@ -5,7 +5,8 @@ import java.util.Stack;
 public class ObjectStack {
 
 	public static void main(String[] args) {
-		Stack stk = new Stack();
+		@SuppressWarnings("rawtypes")
+		Stack<Comparable> stk = new Stack<Comparable>();
 		
 		System.out.println("Creating Stack...");
 		stk.push("Hallo");

@@ -8,7 +8,8 @@ public class ExampleOnLinkedHashSet1 {
 
 	public static void main(String[] args) {
 		
-		LinkedHashSet lhs = new LinkedHashSet();
+		@SuppressWarnings("rawtypes")
+		LinkedHashSet<Comparable> lhs = new LinkedHashSet<Comparable>();
 		
 		lhs.add("smith");
 		lhs.add(10);
@@ -27,7 +28,8 @@ public class ExampleOnLinkedHashSet1 {
 		System.out.println(lhs);
 		
 		System.out.println("displaying the elements using iterator");
-		Iterator iobj=lhs.iterator();
+		@SuppressWarnings("rawtypes")
+		Iterator<Comparable> iobj=lhs.iterator();
 while(iobj.hasNext()) {
 			System.out.println(iobj.next());
 		}

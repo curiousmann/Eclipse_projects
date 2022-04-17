@@ -7,7 +7,7 @@ public class ExampleOnHashMap1 {
 	
 	public static void main(String[] args) {
 		
-		HashMap hm= new HashMap();
+		HashMap<Object,Object> hm= new HashMap<Object,Object>();
 		//hm.put(key,value) --EntrySet
 		hm.put("smith", 10);
 		hm.put(101,"hello");
@@ -28,28 +28,29 @@ public class ExampleOnHashMap1 {
 		System.out.println(hm);
 		
 		//get the Only Keys
-		  Set s= hm.keySet();
+		  Set<Object> s= hm.keySet();
 		
 		System.out.println("the key are : "+s);
 		 System.out.println("displaying Only the Keys :");
-		   Iterator iobj = s.iterator();
+		   Iterator<Object> iobj = s.iterator();
 		  while(iobj.hasNext()) {
 			  System.out.println(iobj.next());
 		  }
 		 
 		System.out.println("displaying only values");
-		Collection cobj  =hm.values();
+		Collection<Object> cobj  =hm.values();
 		 //converting values(cobj) collection to ArrayList;
-		ArrayList al = new ArrayList(cobj);
+		ArrayList<Object> al = new ArrayList<Object>(cobj);
 		al.forEach((c)->System.out.println(c));
 		
  System.out.println("displaying the elements using the iterator");
 	     //get the entrySet()->(key,value)
-		 Set sobj= hm.entrySet();
-		 Iterator iobj1= sobj.iterator();
+		 Set<?> sobj= hm.entrySet();
+		 Iterator<?> iobj1= sobj.iterator();
 		 System.out.println(("Key value pairs are : "));
 		 while(iobj1.hasNext()) {
-			 Map.Entry me=(Map.Entry)iobj1.next();
+			 @SuppressWarnings("rawtypes")
+			Map.Entry me=(Map.Entry)iobj1.next();
 			 System.out.println(me.getKey()+" "+me.getValue());
 		 }
 			  

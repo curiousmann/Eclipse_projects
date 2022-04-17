@@ -7,7 +7,7 @@ public class ExampleOnLinkedList1 {
 
 	public static void main(String[] args) {
 
-		LinkedList ll = new LinkedList();
+		LinkedList<Object> ll = new LinkedList<Object>();
 
 		ll.add(10);
 		ll.add("Hello");
@@ -52,14 +52,14 @@ public class ExampleOnLinkedList1 {
 		System.out.println("Last Object : " + ll.getLast());
 
 		System.out.println("displaying the object using Iterator");
-		Iterator iobj = ll.iterator();
+		Iterator<Object> iobj = ll.iterator();
 
 		while (iobj.hasNext()) {
 			System.out.print(iobj.next() + " ");
 		}
 		System.out.println(" ");
 		System.out.println("displaying the object in backward direction using Iterator");
-		Iterator i2 = ll.descendingIterator();
+		Iterator<Object> i2 = ll.descendingIterator();
 		while (i2.hasNext()) {
 			System.out.print(i2.next() + " ");
 		}

@@ -5,7 +5,7 @@ import java.util.*;
 public class LinkedList1 {
 	public static void main(String[] args) {
 		
-	LinkedList lnk = new LinkedList();
+	LinkedList<String> lnk = new LinkedList<String>();
 
 	lnk.add("Hallo");
 	lnk.add("World");

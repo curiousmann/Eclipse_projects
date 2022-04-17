@@ -1,8 +1,6 @@
 package assignments.jan7;
-	import java.text.ParseException;  
 	import java.text.SimpleDateFormat;  
-	import java.util.Date;  
-	import java.util.Locale; 
+	import java.util.Date; 
 public class Example2OnSimpleDateFormat {
 	public static void main(String[] args) {  
 	    Date date = new Date();  

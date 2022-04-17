@@ -5,7 +5,7 @@ public class ExampleOnTreeSet1 {
 	
 public static void main(String[] args) {
 		
-		TreeSet  ts = new TreeSet();
+		TreeSet<Integer>  ts = new TreeSet<Integer>();
 		
 		ts.add(10);
 		ts.add(40);
@@ -25,13 +25,13 @@ public static void main(String[] args) {
 		System.out.println("after remove : "+ts);
 		
 		System.out.println("displaying the elements using iterator");
-		Iterator iobj =ts.iterator();
+		Iterator<Integer> iobj =ts.iterator();
 		while(iobj.hasNext()) {
 			System.out.println(iobj.next());
 		}
 		
 		System.out.println("displaying the elements using desecnding order descdendingiterator");
-		Iterator i2=ts.descendingIterator();
+		Iterator<Integer> i2=ts.descendingIterator();
 		while(i2.hasNext()) {
 			System.out.print(i2.next()+" ");
 		}
