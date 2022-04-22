@@ -1,13 +1,8 @@
 package com.training.mgdb;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
-
 import org.bson.Document;
 
 import com.mongodb.MongoClient;
-import com.mongodb.client.FindIterable;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
@@ -30,7 +25,7 @@ public class UpdateTheDocument {
 	   clt.updateOne(Filters.eq("deptno",20),Updates.set("location","washington")); 
 	   
 	   System.out.println("Document is updated");
-		
+	   mgClient.close();
 	}
 	
 

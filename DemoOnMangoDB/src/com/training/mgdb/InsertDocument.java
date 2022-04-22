@@ -31,7 +31,7 @@ public class InsertDocument {
 	    clt.insertOne(d);
 	   
      		System.out.println("document inserted Successfully");
-		
+     		mgClient.close();
 	}
 	
 

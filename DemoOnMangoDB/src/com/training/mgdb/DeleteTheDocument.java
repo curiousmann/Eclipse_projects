@@ -5,9 +5,9 @@ import com.mongodb.MongoClient;
 import com.mongodb.client.MongoCollection;
 import com.mongodb.client.MongoDatabase;
 import com.mongodb.client.model.Filters;
-import com.mongodb.client.model.Updates;
 
 public class DeleteTheDocument {
+
 
 	public static void main(String[] args) {
 		
@@ -23,7 +23,7 @@ public class DeleteTheDocument {
 	   
 	   clt.deleteOne(Filters.eq("deptno",30));
 	   System.out.println("DEleted Successfully");
-		
+		mgClient.close();
 	}
 	
 

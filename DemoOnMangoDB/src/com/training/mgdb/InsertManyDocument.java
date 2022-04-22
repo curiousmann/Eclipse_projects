@@ -47,7 +47,7 @@ Document d1 = new Document("deptno",20);
 	    
 
      		System.out.println("Multiple documents are  inserted Successfully");
-		
+     		mgClient.close();
 	}
 	
 
