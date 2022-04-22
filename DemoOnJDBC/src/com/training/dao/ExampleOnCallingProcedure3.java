@@ -18,6 +18,7 @@ public class ExampleOnCallingProcedure3 {
 			int n1=sc.nextInt();
 			System.out.println("enter the second value : ");
 			int n2=sc.nextInt();
+			sc.close();
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			// Define the connection url,username,password
 			String url = "jdbc:mysql://localhost:3306/ust";

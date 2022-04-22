@@ -1,33 +1,22 @@
 package com.training.dao;
 
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class ExampleOnUpdateableResultSet {
+public class ExampleOnUpdateableResultSet2UsingExt {
 
 	public static void main(String[] args) {
 
 		try {
-			// load or register the driver
-			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			// Define the connection url,username,password
-			String url = "jdbc:mysql://localhost:3306/ust";
-			String uname = "root";
-			String pwd = "root";
-
-			// Establish the connection between Java class and Database
-			Connection con = DriverManager.getConnection(url, uname, pwd);
-			// creating the Statement Object executing the select Query
-
+			Connection con = DBUilts.getConnectionForDatabase();
 			Statement stmtObj = con.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE, ResultSet.CONCUR_UPDATABLE);
 
 			String query = "select * from dept";
 
-			ResultSet rs = stmtObj.executeQuery(query); // scrollable result set
+			ResultSet rs = stmtObj.executeQuery(query); // scroll-able result set
 
 			System.out.println("Department Details in Forword direction : ");
 			while (rs.next()) {
@@ -63,7 +52,7 @@ public class ExampleOnUpdateableResultSet {
 			
 			  //insert a record 
 			rs.moveToInsertRow();
-			rs.updateInt(1,50);
+			rs.updateInt(1,51);
 			rs.updateString(2,"testing");
 			rs.updateInt(3,1000); 
 			rs.insertRow();
@@ -73,23 +62,19 @@ public class ExampleOnUpdateableResultSet {
 			  //updating record 
 			rs.absolute(3); 
 			rs.updateString(2,"Marketing");
-			  rs.updateString(3,"viriginia"); 
+			  rs.updateInt(3,200); 
 			  rs.updateRow();
 			 
 			
-//			  deleteing a record at row 4 
-			  rs.absolute(4); 
+//			  Deleting a record at row 4 
+			  rs.absolute(2); 
 			  rs.deleteRow();
 			 
 			// close the objects
 			stmtObj.close();
-			con.close();
+			DBUilts.closeDatabaseConnection();
 
-		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

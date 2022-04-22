@@ -15,7 +15,7 @@ public class DBUtil {
 	public static Connection getConnectionForDatabase() {
 
 		try {
-			FileReader fr = new FileReader("C:\\Users\\Mann\\Desktop\\JAVA\\java FSD\\demoOnJdbcWithMaven\\src\\main\\java\\com\\ust\\dao\\db.properties");
+			FileReader fr = new FileReader("db.properties");
 
 			Properties p = new Properties();
 
@@ -41,10 +41,8 @@ public class DBUtil {
 
 			e.printStackTrace();
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 

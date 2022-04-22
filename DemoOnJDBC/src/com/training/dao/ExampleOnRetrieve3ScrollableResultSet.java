@@ -55,7 +55,7 @@ public class ExampleOnRetrieve3ScrollableResultSet {
 			
 			
 			//random record
-			rs.absolute(3);
+			rs.absolute(1);
 			System.out.println(" ");
 			System.out.println("Random record at 3");
 			System.out.println(rs.getInt(1)+" "+rs.getString(2)+" "+rs.getString(3));
@@ -65,10 +65,8 @@ public class ExampleOnRetrieve3ScrollableResultSet {
 			con.close();
 					
 		} catch (ClassNotFoundException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
